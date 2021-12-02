@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+    long int N,K,x,y,sandwich=0;
+    int T,i;
+    scanf("%d",&T);
+    for(i=1;i<=T;i++)
+    {
+        scanf("%ld",&N);
+        scanf("%ld",&K);
+        sandwich=N;
+        while(N>=K) {
+        x = N/K;
+        y = N%K;
+        sandwich+=x;
+        N=x+y;
+        }
+    printf("%ld\n",sandwich);
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    
+    return 0;
+}
